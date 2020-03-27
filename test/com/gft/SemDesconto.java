@@ -1,8 +1,8 @@
 package com.gft;
 
-public abstract class SemDesconto extends CalculadoraFaixaDesconto {
+public class SemDesconto extends CalculadoraFaixaDesconto {
 
-	private CalculadoraFaixaDesconto proximo;
+	public CalculadoraFaixaDesconto proximo;
 	
 	public SemDesconto(CalculadoraFaixaDesconto proximo) {
 		super(proximo);
@@ -18,5 +18,8 @@ public abstract class SemDesconto extends CalculadoraFaixaDesconto {
 		
 		return desconto;
 	}
-	protected abstract double calcular(double valorTotal);
+	public double calcular(double valorTotal) {
+		return valorTotal;
+		
+	}
 }
